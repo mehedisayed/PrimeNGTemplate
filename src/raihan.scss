@@ -1,9 +1,104 @@
-@import "style-templete/components-style/inputtext.scss";
+@import "style-templete/aiub.style.templete.scss";
 
 .p-button.p-button-text {
   color: var(--app-secondary-color);
 }
 .main-page-body {
   padding: 10px;
+}
+
+.p-field-vertical{
+  display: flex;
+  flex-direction: column;
+}
+
+.p-field-vertical > label{
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.p.error {
+  color: var(--app-danger-color-2);
+}
+
+//Check Box
+.p-checkbox {
+  width: 15px;
+  height: 15px;
+}
+
+.p-checkbox .p-checkbox-box {
+  border: 1.5px solid var(--app-border-color);
+  background: var(--app-secondary-background-color);
+  width: 15px;
+  height: 15px;
+}
+
+.p-checkbox .p-checkbox-box.p-highlight {
+  border-color: var(--app-secondary-color);
+  background: var(--app-secondary-color);
+}
+
+
+.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
+  border-color: var(--app-secondary-color);
+  background: var(--app-secondary-color);
+}
+
+//Radio Button
+.p-radiobutton {
+  width: 15px;
+  height: 15px;
+}
+
+.p-radiobutton .p-radiobutton-box .p-radiobutton-icon {
+  width: 7px;
+  height: 7px;
+}
+
+.p-radiobutton .p-radiobutton-box {
+  border: 1.5px solid var(--app-border-color);
+  background: #ffffff;
+  width: 15px;
+  height: 15px;
+  color: var(--app-dark-text-color) !important;
+}
+
+.p-radiobutton .p-radiobutton-box.p-highlight {
+  border-color: var(--app-secondary-color);
+  background: var(--app-secondary-color);
+}
+
+
+.p-radiobutton:not(.p-radiobutton-disabled) .p-radiobutton.p-highlight:hover {
+  border-color: var(--app-secondary-color);
+  background: var(--app-secondary-color);
+}
+
+//DropDown
+.p-dropdown-panel .p-dropdown-items:not(.p-dropdown-virtualscroll) {
+  padding: 0;
+}
+
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+  background: var(--app-secondary-color);
+}
+
+.p-dropdown-panel {
+  color: var(--app-dark-text-color)
+}
+
+.pi {
+  font-size: .875rem;
+}
+
+//InputGroup
+.p-inputgroup {
+  max-height: 32px;
 }
 

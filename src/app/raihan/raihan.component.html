@@ -1,26 +1,166 @@
 <div class="main-page-body">
     <div class="p-grid">
         <div class="p-col">
-            <input type="text" pInputText class="p-inputtext-sm p-custom-input" placeholder="Enter Section Title"> 
+            <input type="text" pInputText class="p-inputtext-sm width-p-100" placeholder="Enter Section Title"> 
         </div>
         <div class="p-col">
             <span class="p-float-label">
-                <input id="float-input" type="text" pInputText class="p-custom-input"> 
+                <input id="float-input" type="text" pInputText class="width-p-100"> 
                 <label for="float-input">Username</label>
             </span>
         </div>
         <div class="p-col">
-            <span class="p-input-icon-left">
+            <span class="p-input-icon-left width-p-100">
                 <i class="pi pi-search"></i>
-                <input type="text" pInputText placeholder="Search" class="p-custom-input">         
+                <input type="text" pInputText placeholder="Search" class="width-p-100">         
             </span>
         </div>
         <div class="p-col">
-            <span class="p-input-icon-right">
+            <span class="p-input-icon-right width-p-100">
                 <i class="pi pi-spin pi-spinner"></i>
-                <input type="text" pInputText class="p-custom-input">        
+                <input type="text" pInputText class="width-p-100">        
             </span> 
+        </div>
+
+        <div class="p-col">
+            <div class="p-field" style="display: flex;
+            flex-direction: column;">
+                <input id="username2" type="username" aria-describedby="username2-help" pinputtext="" class="ng-invalid ng-dirty p-inputtext p-component">
+                <small id="username2-help" class="p-error">Username is not available.</small>
+            </div>
+        </div>
+
+        <div class="p-col">
+            <textarea [rows]="5" [cols]="30" class="width-p-100" pInputTextarea></textarea>
+        </div>
+    </div>
+
+    <div class="p-grid">
+        <div class="p-col">
+            <div class="p-field-vertical">
+                <label for="integeronly">Integer Only</label>
+                <p-inputNumber inputId="integeronly" styleClass="width-p-100" [(ngModel)]="value1">
+                </p-inputNumber>
+            </div>
+        </div>
+
+        <div class="p-col">
+            <div class="p-field-vertical">
+                <label for="withoutgrouping">Without Grouping</label>
+        <p-inputNumber [(ngModel)]="value2" mode="decimal" styleClass="width-p-100" inputId="withoutgrouping" [useGrouping]="false">
+        </p-inputNumber>
+            </div>
+        </div>
+
+        <div class="p-col">
+            <div class="p-field-vertical">
+                <label for="minmaxfraction">Min-Max Fraction Digits</label>
+                <p-inputNumber [(ngModel)]="value3" inputId="minmaxfraction" styleClass="width-p-100" mode="decimal" [minFractionDigits]="2" [maxFractionDigits]="5">
+                </p-inputNumber>
+            </div>
+        </div>
+
+        <div class="p-col">
+            <div class="p-field-vertical">
+                <label for="minmax">Min-Max Boundaries</label>
+        <p-inputNumber [(ngModel)]="value4" inputId="minmax" styleClass="width-p-100" inputId="minmax" mode="decimal" [min]="0" [max]="100">
+        </p-inputNumber>
+            </div>
+        </div>
+
+        <div class="p-col">
+            <div class="p-field-vertical">
+                <label for="currency-us">BD Currency</label>
+        <p-inputNumber [(ngModel)]="value9" inputId="currency-us" styleClass="width-p-100" mode="currency" currency="BDT" locale="en-BD">
+        </p-inputNumber>
+            </div>
+        </div>
+
+        <div class="p-col">
+            <div class="p-field-vertical">
+                <label for="mile">Mile</label>
+        <p-inputNumber [(ngModel)]="value13" styleClass="width-p-100"  inputId="mile" suffix=" mi">
+        </p-inputNumber>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-grid">
+        <div class="p-col">
+            <div class="p-field-vertical">
+                <label for="stacked">Stacked</label>
+                <p-inputNumber [(ngModel)]="value17" [showButtons]="true" styleClass="width-p-100" inputId="stacked" mode="currency" currency="USD">
+                </p-inputNumber>
+            </div>
+        </div>
+
+        <div class="p-col">
+            <form #form="ngForm">
+                <div class="p-field-vertical">
+                    <label for="cc">Credit Card</label>
+        <input id="cc" type="text" name="cc" styleClass="width-p-100" [(ngModel)]="cc" pInputText [pKeyFilter]="ccRegex" [pValidateOnly]="true" placeholder="1234-1234-1234-1234" style="margin-bottom: .5em">
+        <p-message styleClass="width-p-100" severity="error" text="Not a valid number" [@errorState]="form.dirty && !form.valid ? 'visible' : 'hidden'"></p-message>
+                </div>
+            </form>
+        </div>
+
+        <div class="p-col">
+            <div class="p-field-vertical">
+                <label>Check Box</label>
+                <div>
+                    <p-checkbox name="groupname" value="val1" label="Value 1" [(ngModel)]="selectedValues"></p-checkbox>
+<p-checkbox name="groupname" value="val2" label="Value 2" [(ngModel)]="selectedValues"></p-checkbox>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-col">
+            <div class="p-field-vertical">
+                <label>Check Box</label>
+                <div>
+                    <p-radioButton name="groupname" value="val1" label="Value 1" [(ngModel)]="selectedValue"></p-radioButton>
+                    <p-radioButton name="groupname" value="val2" label="Value 2" [(ngModel)]="selectedValue"></p-radioButton>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-col">
+            <div class="p-field-vertical">
+                <label for="cc">Credit Card</label>
+                <p-dropdown styleClass="width-p-100" [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"></p-dropdown>
+            </div>
+        </div>
+
+        <div class="p-col">
             
         </div>
     </div>
+
+    <div class="p-grid">
+        <div class="p-col">
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">$</span>
+                <input type="text" pInputText placeholder="Price">   
+                <span class="p-inputgroup-addon">.00</span>      
+            </div>
+        </div>
+
+        <div class="p-col">
+            <p-inputSwitch [(ngModel)]="checked"></p-inputSwitch>
+        </div>
+
+        <div class="p-col">
+            <p-chips [(ngModel)]="chipsValues" separator=","></p-chips>
+        </div>
+
+        <div class="p-col">
+        </div>
+
+        <div class="p-col">
+        </div>
+
+        <div class="p-col">
+        </div>
+    </div>
+    
 </div>

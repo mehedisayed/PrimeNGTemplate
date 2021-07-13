@@ -3,12 +3,14 @@
 @import "~primeng/resources/primeng.min.css";
 @import "~primeicons/primeicons.css";
 @import "~primeflex/primeflex.css";
+@import "style-templete/app.scale.scss";
 @import "color.scss";
 @import "raihan.scss";
 @import "mehedi.scss";
 
 html {
-    height: 100%;
+  height: 100%;
+  width: 100%;
     font-size: 14px;
 }
 

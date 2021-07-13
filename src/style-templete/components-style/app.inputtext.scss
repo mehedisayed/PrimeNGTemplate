@@ -5,14 +5,18 @@
     padding: 0.5rem 0.7rem;
     color: var(--app-dark-text-color) !important;
   }
+
+//   .p-inputtext:enabled:hover {
+//     border-color: var(--app-secondary-color) !important;
+// }
   
   .p-inputtext:enabled:focus{
     border-color: var(--app-secondary-color) !important;
   }
   
-  .p-inputtext:hover{
-    box-shadow: 0 0 0 0.05rem var(--app-secondary-color) !important;
-  }
+  // .p-inputtext:hover{
+  //   box-shadow: 0 0 0 0.05rem var(--app-secondary-color) !important;
+  // }
   
   //Input Left Icon
   .p-input-icon-left > i:first-of-type {
@@ -29,12 +33,30 @@
     padding-left: 2rem;
   }
   
-  .p-custom-input {
-    width: 100%;
+  //Input Left Icon
+
+  //Input Right Icon
+  .p-input-icon-right > i:first-of-type {
+    right: 0.7rem;
+    color: var(--app-data-label-color);
   }
+  
+  .p-input-icon-right > i.pi {
+    padding-top: 1.5px;
+    font-size: 0.875rem !important;
+  }
+  
+  .p-input-icon-right > .p-inputtext {
+    padding-right: 2rem;
+  }
+  
+  //Input Right Icon
+  
   
   .p-float-label > label {
     font-size: 0.875rem !important;
     left: 0.7rem;
     color: var(--app-data-label-color);
   }
+
+  //Ipute Text Area
