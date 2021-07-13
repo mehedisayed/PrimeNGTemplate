@@ -1,0 +1,14 @@
+/*****************/
+// p-rating
+.p-rating {
+  padding: 0.5rem 0.5rem !important;
+}
+//rating icons
+.p-rating .p-rating-icon.pi-star {
+  color: var(--app-secondary-color);
+}
+//focus box
+.p-rating .p-rating-icon:focus {
+  box-shadow: 0 0 0 0.2rem var(--app-secondary-color);
+}
+/***********************/

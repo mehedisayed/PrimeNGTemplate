@@ -1,1 +1,21 @@
-<p>mehedi works!</p>
+<div class="main-page-body">
+  <div class="p-grid">
+    <div class="p-col">
+      <p-password
+        [(ngModel)]="password"
+        [toggleMask]="true"
+        [feedback]="false"
+        styleClass="width-p-100"
+        inputStyleClass="width-p-100"
+      ></p-password>
+    </div>
+    <div class="p-col"><p-rating [(ngModel)]="ratingValue"></p-rating></div>
+    <div class="p-col">
+      <p-rating
+        [ngModel]="ratingValue"
+        readonly="true"
+        [cancel]="false"
+      ></p-rating>
+    </div>
+  </div>
+</div>
