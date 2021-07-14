@@ -1,5 +1,19 @@
+//primary button
 .p-button {
-    color: var(--app-light-text-color);
-    background: var(--app-secondary-color);
-    border: 1px solid var(--app-secondary-color);
+  color: var(--app-light-text-color);
+  background: var(--app-secondary-color);
+  border: 1px solid var(--app-secondary-color);
+}
+//primary buton outlined
+.p-button.p-button-outlined {
+  color: var(--app-secondary-color);
+}
+
+.p-button.p-button-outlined:enabled:hover {
+  color: var(--app-secondary-color);
+}
+//button-text hover
+
+.p-button.p-button-text:enabled:hover {
+  color: var(--app-secondary-color);
 }

@@ -17,5 +17,125 @@
         [cancel]="false"
       ></p-rating>
     </div>
+    <div class="p-col">
+      <p-paginator
+        [rows]="10"
+        [totalRecords]="120"
+        [rowsPerPageOptions]="[10, 20, 30]"
+      ></p-paginator>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col">
+      <p-table
+        #dataTableProduct
+        [value]="products"
+        dataKey="id"
+        styleClass="p-datatable-sm p-datatable-gridlines"
+        [paginator]="true"
+        [rows]="25"
+        [showCurrentPageReport]="true"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [rowsPerPageOptions]="[10, 25, 50]"
+        [globalFilterFields]="['name', 'category', 'inventoryStatus']"
+      >
+        >
+        <ng-template pTemplate="caption">
+          <div class="p-d-flex">
+            <label>Products</label>
+            <button
+              pButton
+              label="Clear"
+              class="p-button-outlined p-ml-2"
+              icon="pi pi-filter-slash"
+              (click)="clear(dataTableProduct)"
+            ></button>
+            <span class="p-input-icon-left p-ml-auto">
+              <i class="pi pi-search"></i>
+              <input
+                pInputText
+                type="text"
+                (input)="
+                  dataTableProduct.filterGlobal($event.target.value, 'contains')
+                "
+                placeholder="Search keyword"
+              />
+            </span>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+          <tr>
+            <th pSortableColumn="name">
+              Name <p-sortIcon field="name"></p-sortIcon>
+              <p-columnFilter
+                type="text"
+                field="name"
+                display="menu"
+              ></p-columnFilter>
+            </th>
+            <th pSortableColumn="price">
+              Price <p-sortIcon field="price"></p-sortIcon>
+              <p-columnFilter
+                type="numeric"
+                field="price"
+                display="menu"
+                currency="USD"
+              ></p-columnFilter>
+            </th>
+            <th pSortableColumn="category">
+              Category <p-sortIcon field="category"></p-sortIcon>
+            </th>
+            <th pSortableColumn="rating">
+              Reviews <p-sortIcon field="rating"></p-sortIcon>
+            </th>
+            <th pSortableColumn="inventoryStatus">
+              Status <p-sortIcon field="inventoryStatus"></p-sortIcon>
+              <p-columnFilter
+                field="inventoryStatus"
+                matchMode="equals"
+                display="menu"
+              >
+                <ng-template
+                  pTemplate="filter"
+                  let-value
+                  let-filter="filterCallback"
+                >
+                  <p-dropdown
+                    [ngModel]="value"
+                    [options]="statuses"
+                    (onChange)="filter($event.value)"
+                    placeholder="Any"
+                  >
+                    <ng-template let-option pTemplate="item">
+                      <span [class]="'customer-badge status-' + option.value">{{
+                        option.label
+                      }}</span>
+                    </ng-template>
+                  </p-dropdown>
+                </ng-template>
+              </p-columnFilter>
+            </th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+          <tr>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price | currency: "USD" }}</td>
+            <td>{{ product.category }}</td>
+            <td>
+              <p-rating
+                [ngModel]="product.rating"
+                [readonly]="true"
+                [cancel]="false"
+              ></p-rating>
+            </td>
+            <td>
+              <span>{{ product.inventoryStatus }}</span>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+    <div class="p-col"></div>
   </div>
 </div>

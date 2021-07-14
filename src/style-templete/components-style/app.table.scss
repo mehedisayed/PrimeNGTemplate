@@ -1,0 +1,24 @@
+//table header
+.p-datatable .p-datatable-header {
+  background: var(--app-content-header-color);
+}
+//wrapper
+.p-datatable-wrapper {
+  background: var(--app-secondary-background-color);
+}
+
+//filter active icon
+.p-column-filter-menu-button.p-column-filter-menu-button-active,
+.p-column-filter-menu-button.p-column-filter-menu-button-active:hover {
+  background: var(--app-secondary-color);
+}
+//filter icon focus
+.p-column-filter-menu-button:focus {
+  box-shadow: 0 0 0 0.2rem var(--app-secondary-color);
+}
+
+//sort
+.p-datatable .p-sortable-column.p-highlight:hover,
+.p-datatable .p-sortable-column.p-highlight {
+  color: var(--app-secondary-color);
+}

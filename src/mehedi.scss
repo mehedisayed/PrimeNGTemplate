@@ -12,3 +12,27 @@
   box-shadow: 0 0 0 0.2rem var(--app-secondary-color);
 }
 /***********************/
+//paginator
+
+.p-paginator {
+  color: var(--app-secondary-color) !important;
+  background: var(--app-content-footer-color);
+}
+
+// pagination next-prev
+.p-paginator .p-paginator-first,
+.p-paginator .p-paginator-prev,
+.p-paginator .p-paginator-next,
+.p-paginator .p-paginator-last {
+  color: var(--app-secondary-color) !important;
+}
+// pagination highlight page
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+  background: var(--app-secondary-color) !important;
+  border-color: var(--app-secondary-color) !important;
+  color: var(--app-light-text-color) !important;
+}
+//pagination details
+.p-paginator .p-paginator-current {
+  color: var(--app-secondary-color) !important;
+}

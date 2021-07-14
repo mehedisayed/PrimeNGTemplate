@@ -20,6 +20,8 @@ import { InputSwitchModule } from 'primeng/inputswitch';
 import { ChipsModule } from 'primeng/chips';
 import { PasswordModule } from 'primeng/password';
 import { RatingModule } from 'primeng/rating';
+import { PaginatorModule } from 'primeng/paginator';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [AppComponent, MehediComponent, RaihanComponent],
@@ -41,6 +43,8 @@ import { RatingModule } from 'primeng/rating';
     ChipsModule,
     PasswordModule,
     RatingModule,
+    PaginatorModule,
+    TableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
