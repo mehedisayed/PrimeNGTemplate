@@ -10,10 +10,18 @@ export class MehediComponent implements OnInit {
   password: string;
   ratingValue: number = 3;
   products: any[];
+  selectedProduct: any;
   statuses: any[];
+  cols: any[];
   constructor() {}
 
   ngOnInit(): void {
+    this.cols = [
+      { field: 'code', header: 'Code' },
+      { field: 'name', header: 'Name' },
+      { field: 'category', header: 'Category' },
+      { field: 'quantity', header: 'Quantity' },
+    ];
     this.products = [
       {
         id: '1000',
@@ -144,5 +152,9 @@ export class MehediComponent implements OnInit {
   }
   clear(table: Table) {
     table.clear();
+  }
+  exportCSV(dataTableProduct) {
+    dataTableProduct.value = this.products;
+    dataTableProduct.exportCSV();
   }
 }

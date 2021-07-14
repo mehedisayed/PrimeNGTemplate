@@ -29,8 +29,12 @@
     <div class="p-col">
       <p-table
         #dataTableProduct
+        [columns]="cols"
         [value]="products"
+        selectionMode="single"
+        [(selection)]="selectedProduct"
         dataKey="id"
+        [scrollable]="true"
         styleClass="p-datatable-sm p-datatable-gridlines"
         [paginator]="true"
         [rows]="25"
@@ -43,6 +47,21 @@
         <ng-template pTemplate="caption">
           <div class="p-d-flex">
             <label>Products</label>
+            <button
+              type="button"
+              pButton
+              icon="pi pi-file-o"
+              (click)="exportCSV(dataTableProduct)"
+              class="p-mr-2 p-ml-2"
+            ></button>
+            <button
+              type="button"
+              pButton
+              icon="pi pi-file-o"
+              (click)="dataTableProduct.exportCSV()"
+              class="p-mr-2"
+            ></button>
+
             <button
               pButton
               label="Clear"
@@ -118,7 +137,7 @@
           </tr>
         </ng-template>
         <ng-template pTemplate="body" let-product>
-          <tr>
+          <tr [pSelectableRow]="product">
             <td>{{ product.name }}</td>
             <td>{{ product.price | currency: "USD" }}</td>
             <td>{{ product.category }}</td>

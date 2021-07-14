@@ -22,6 +22,7 @@ import { PasswordModule } from 'primeng/password';
 import { RatingModule } from 'primeng/rating';
 import { PaginatorModule } from 'primeng/paginator';
 import { TableModule } from 'primeng/table';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, MehediComponent, RaihanComponent],
@@ -45,6 +46,7 @@ import { TableModule } from 'primeng/table';
     RatingModule,
     PaginatorModule,
     TableModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

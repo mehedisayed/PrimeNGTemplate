@@ -22,3 +22,10 @@
 .p-datatable .p-sortable-column.p-highlight {
   color: var(--app-secondary-color);
 }
+
+//selction
+
+.p-datatable .p-datatable-tbody > tr.p-highlight {
+  background: var(--app-secondary-color);
+  color: var(--app-light-text-color);
+}
