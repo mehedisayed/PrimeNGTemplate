@@ -12,8 +12,16 @@
 .p-button.p-button-outlined:enabled:hover {
   color: var(--app-secondary-color);
 }
-//button-text hover
 
+//button-text hover
 .p-button.p-button-text:enabled:hover {
   color: var(--app-secondary-color);
+}
+
+//button hover
+
+.p-button:enabled:hover {
+  background: var(--app-secondary-color);
+  color: var(--app-light-text-color);
+  border-color: var(--app-secondary-color);
 }

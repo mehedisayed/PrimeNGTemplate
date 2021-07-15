@@ -1,0 +1,49 @@
+//calender icon
+.p-calendar-w-btn .p-datepicker-trigger {
+  height: 32px !important;
+}
+
+// calender selection today
+.p-datepicker table td.p-datepicker-today > span.p-highlight {
+  color: var(--app-light-text-color);
+  background: var(--app-secondary-color);
+}
+// calender prev and next focus
+.p-datepicker .p-datepicker-header .p-datepicker-prev:focus,
+.p-datepicker .p-datepicker-header .p-datepicker-next:focus {
+  box-shadow: 0 0 0 0.1rem var(--app-secondary-color);
+}
+//calender select date
+.p-datepicker table td > span.p-highlight {
+  color: var(--app-light-text-color);
+  background: var(--app-secondary-color);
+}
+
+.p-datepicker .p-datepicker-header .p-datepicker-title select {
+  height: 32px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  padding: 0.25rem;
+}
+
+.p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-month {
+  option:checked {
+    background: var(--app-secondary-color);
+    color: var(--app-light-text-color);
+  }
+  option:focus {
+    background: var(--app-secondary-color);
+    color: var(--app-light-text-color);
+  }
+  option:hover {
+    background: var(--app-secondary-color);
+    color: var(--app-light-text-color);
+  }
+  option:active {
+    background: var(--app-secondary-color);
+    color: var(--app-light-text-color);
+  }
+}

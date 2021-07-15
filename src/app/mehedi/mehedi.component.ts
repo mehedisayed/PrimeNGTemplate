@@ -13,6 +13,7 @@ export class MehediComponent implements OnInit {
   selectedProduct: any;
   statuses: any[];
   cols: any[];
+  date: Date;
   constructor() {}
 
   ngOnInit(): void {

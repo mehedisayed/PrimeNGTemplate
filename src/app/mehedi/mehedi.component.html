@@ -9,7 +9,9 @@
         inputStyleClass="width-p-100"
       ></p-password>
     </div>
-    <div class="p-col"><p-rating [(ngModel)]="ratingValue"></p-rating></div>
+    <div class="p-col">
+      <p-rating [(ngModel)]="ratingValue"> </p-rating>
+    </div>
     <div class="p-col">
       <p-rating
         [ngModel]="ratingValue"
@@ -23,6 +25,27 @@
         [totalRecords]="120"
         [rowsPerPageOptions]="[10, 20, 30]"
       ></p-paginator>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col">
+      <p-calendar
+        [(ngModel)]="date"
+        [showIcon]="true"
+        showButtonBar="true"
+        inputId="icon"
+      ></p-calendar>
+    </div>
+    <div class="p-col">
+      <p-calendar
+        [(ngModel)]="date"
+        [showIcon]="true"
+        showButtonBar="true"
+        [monthNavigator]="true"
+        [yearNavigator]="true"
+        yearRange="1992:2030"
+        inputId="icon2"
+      ></p-calendar>
     </div>
   </div>
   <div class="p-grid">
@@ -155,6 +178,5 @@
         </ng-template>
       </p-table>
     </div>
-    <div class="p-col"></div>
   </div>
 </div>
