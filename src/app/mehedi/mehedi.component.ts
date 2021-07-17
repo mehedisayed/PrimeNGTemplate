@@ -1,22 +1,35 @@
 import { Component, OnInit } from '@angular/core';
+import { Message, MessageService } from 'primeng/api';
 import { Table } from 'primeng/table';
 
 @Component({
   selector: 'app-mehedi',
   templateUrl: './mehedi.component.html',
   styleUrls: ['./mehedi.component.scss'],
+  providers: [MessageService],
 })
 export class MehediComponent implements OnInit {
+  msgs: Message[];
   password: string;
   ratingValue: number = 3;
   products: any[];
+  countries: any[];
+  selectedCity: any;
+  filteredProdcut: any[];
   selectedProduct: any;
   statuses: any[];
   cols: any[];
   date: Date;
-  constructor() {}
+  selectedCountryAdvanced: any[];
+  constructor(private messageService: MessageService) {}
 
   ngOnInit(): void {
+    this.msgs = [
+      { severity: 'success', summary: 'Success', detail: 'Message Content' },
+      { severity: 'info', summary: 'Info', detail: 'Message Content' },
+      { severity: 'warn', summary: 'Warning', detail: 'Message Content' },
+      { severity: 'error', summary: 'Error', detail: 'Message Content' },
+    ];
     this.cols = [
       { field: 'code', header: 'Code' },
       { field: 'name', header: 'Name' },
@@ -145,11 +158,129 @@ export class MehediComponent implements OnInit {
         rating: 3,
       },
     ];
+    this.countries = [
+      {
+        name: 'Australia',
+        code: 'AU',
+        states: [
+          {
+            name: 'New South Wales',
+            cities: [
+              { cname: 'Sydney', code: 'A-SY' },
+              { cname: 'Newcastle', code: 'A-NE' },
+              { cname: 'Wollongong', code: 'A-WO' },
+            ],
+          },
+          {
+            name: 'Queensland',
+            cities: [
+              { cname: 'Brisbane', code: 'A-BR' },
+              { cname: 'Townsville', code: 'A-TO' },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Canada',
+        code: 'CA',
+        states: [
+          {
+            name: 'Quebec',
+            cities: [
+              { cname: 'Montreal', code: 'C-MO' },
+              { cname: 'Quebec City', code: 'C-QU' },
+            ],
+          },
+          {
+            name: 'Ontario',
+            cities: [
+              { cname: 'Ottawa', code: 'C-OT' },
+              { cname: 'Toronto', code: 'C-TO' },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'United States',
+        code: 'US',
+        states: [
+          {
+            name: 'California',
+            cities: [
+              { cname: 'Los Angeles', code: 'US-LA' },
+              { cname: 'San Diego', code: 'US-SD' },
+              { cname: 'San Francisco', code: 'US-SF' },
+            ],
+          },
+          {
+            name: 'Florida',
+            cities: [
+              { cname: 'Jacksonville', code: 'US-JA' },
+              { cname: 'Miami', code: 'US-MI' },
+              { cname: 'Tampa', code: 'US-TA' },
+              { cname: 'Orlando', code: 'US-OR' },
+            ],
+          },
+          {
+            name: 'Texas',
+            cities: [
+              { cname: 'Austin', code: 'US-AU' },
+              { cname: 'Dallas', code: 'US-DA' },
+              { cname: 'Houston', code: 'US-HO' },
+            ],
+          },
+        ],
+      },
+    ];
     this.statuses = [
       { label: 'LOWSTOCK', value: 'LOWSTOCK' },
       { label: 'OUTOFSTOCK', value: 'OUTOFSTOCK' },
       { label: 'INSTOCK', value: 'INSTOCK' },
     ];
+  }
+  showSuccess() {
+    this.messageService.add({
+      severity: 'success',
+      summary: 'Success',
+      detail: 'Message Content',
+    });
+  }
+
+  showInfo() {
+    this.messageService.add({
+      severity: 'info',
+      summary: 'Info',
+      detail: 'Message Content',
+    });
+  }
+
+  showWarn() {
+    this.messageService.add({
+      severity: 'warn',
+      summary: 'Warn',
+      detail: 'Message Content',
+    });
+  }
+
+  showError() {
+    this.messageService.add({
+      severity: 'error',
+      summary: 'Error',
+      detail: 'Message Content',
+    });
+  }
+  filterProduct(event) {
+    let filtered: any[] = [];
+    let query = event.query;
+
+    for (let i = 0; i < this.products.length; i++) {
+      let product = this.products[i];
+      if (product.name.toLowerCase().indexOf(query.toLowerCase()) == 0) {
+        filtered.push(product);
+      }
+    }
+
+    this.filteredProdcut = filtered;
   }
   clear(table: Table) {
     table.clear();

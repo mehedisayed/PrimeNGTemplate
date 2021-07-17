@@ -1,0 +1,23 @@
+.p-toast .p-toast-message.p-toast-message-success {
+  background: var(--app-success-color) !important;
+  border: solid var(--app-success-color) !important;
+  color: var(--app-light-text-color) !important;
+}
+
+.p-toast .p-toast-message.p-toast-message-info {
+  background: var(--app-info-color) !important;
+  border: solid var(--app-info-color) !important;
+  color: var(--app-light-text-color) !important;
+}
+
+.p-toast .p-toast-message.p-toast-message-warn {
+  background: var(--app-warnning-color) !important;
+  border: solid var(--app-warnning-color) !important;
+  color: var(--app-dark-text-color) !important;
+}
+
+.p-toast .p-toast-message.p-toast-message-error {
+  background: var(--app-danger-color) !important;
+  border: solid var(--app-danger-color) !important;
+  color: var(--app-light-text-color) !important;
+}

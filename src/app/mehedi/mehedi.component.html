@@ -29,6 +29,28 @@
   </div>
   <div class="p-grid">
     <div class="p-col">
+      <p-autoComplete
+        [(ngModel)]="selectedCountryAdvanced"
+        [suggestions]="filteredProdcut"
+        field="name"
+        (completeMethod)="filterProduct($event)"
+        [dropdown]="true"
+        [multiple]="true"
+      >
+      </p-autoComplete>
+    </div>
+    <div class="p-col">
+      <p-cascadeSelect
+        [(ngModel)]="selectedCity"
+        [options]="countries"
+        optionLabel="cname"
+        optionGroupLabel="name"
+        [optionGroupChildren]="['states', 'cities']"
+        [style]="{ minWidth: '14rem' }"
+        placeholder="Select a City"
+      ></p-cascadeSelect>
+    </div>
+    <div class="p-col">
       <p-calendar
         [(ngModel)]="date"
         [showIcon]="true"
@@ -46,6 +68,46 @@
         yearRange="1992:2030"
         inputId="icon2"
       ></p-calendar>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col">
+      <p-messages [(value)]="msgs" [enableService]="false"></p-messages>
+    </div>
+    <div class="p-col">
+      <p-toast></p-toast>
+      <button
+        type="button"
+        pButton
+        pRipple
+        (click)="showSuccess()"
+        label="Success"
+        class="p-button-success p-mb-2 p-mr-2"
+      ></button>
+      <button
+        type="button"
+        pButton
+        pRipple
+        (click)="showInfo()"
+        label="Info"
+        class="p-button-info p-mb-2 p-mr-2"
+      ></button>
+      <button
+        type="button"
+        pButton
+        pRipple
+        (click)="showWarn()"
+        label="Warn"
+        class="p-button-warning p-mb-2 p-mr-2"
+      ></button>
+      <button
+        type="button"
+        pButton
+        pRipple
+        (click)="showError()"
+        label="Error"
+        class="p-button-danger p-mb-2"
+      ></button>
     </div>
   </div>
   <div class="p-grid">
@@ -177,6 +239,30 @@
           </tr>
         </ng-template>
       </p-table>
+    </div>
+    <div class="p-col">
+      <p-progressSpinner
+        [style]="{ width: '50px', height: '50px' }"
+        styleClass="custom-spinner"
+        strokeWidth="3"
+        fill="#EEEEEE"
+        animationDuration=".5s"
+      ></p-progressSpinner>
+    </div>
+    <div class="p-col">
+      <div class="card">
+        <h5>Dynamic</h5>
+        <p-progressBar [value]="40"></p-progressBar>
+
+        <h5>Static</h5>
+        <p-progressBar [value]="50"></p-progressBar>
+
+        <h5>Indeterminate</h5>
+        <p-progressBar
+          mode="indeterminate"
+          [style]="{ height: '6px' }"
+        ></p-progressBar>
+      </div>
     </div>
   </div>
 </div>

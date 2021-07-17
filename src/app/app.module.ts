@@ -23,6 +23,12 @@ import { RatingModule } from 'primeng/rating';
 import { PaginatorModule } from 'primeng/paginator';
 import { TableModule } from 'primeng/table';
 import { CalendarModule } from 'primeng/calendar';
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { CascadeSelectModule } from 'primeng/cascadeselect';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { ProgressBarModule } from 'primeng/progressbar';
+import { MessagesModule } from 'primeng/messages';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
   declarations: [AppComponent, MehediComponent, RaihanComponent],
@@ -47,6 +53,12 @@ import { CalendarModule } from 'primeng/calendar';
     PaginatorModule,
     TableModule,
     CalendarModule,
+    AutoCompleteModule,
+    CascadeSelectModule,
+    ProgressSpinnerModule,
+    ProgressBarModule,
+    MessagesModule,
+    ToastModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

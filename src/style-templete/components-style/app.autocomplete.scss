@@ -1,0 +1,11 @@
+.p-autocomplete-panel .p-autocomplete-items .p-autocomplete-item:hover {
+  background: var(--app-secondary-color) !important;
+  color: var(--app-light-text-color) !important;
+}
+.p-autocomplete-dd .p-autocomplete-dropdown {
+  height: 32px !important;
+}
+.p-autocomplete .p-autocomplete-multiple-container .p-autocomplete-token {
+  background: var(--app-secondary-color) !important;
+  color: var(--app-light-text-color) !important;
+}

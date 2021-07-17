@@ -1,0 +1,20 @@
+.p-message.p-message-success {
+  background: var(--app-success-color) !important;
+  border: solid var(--app-success-color) !important;
+  color: var(--app-light-text-color) !important;
+}
+.p-message.p-message-info {
+  background: var(--app-info-color) !important;
+  border: solid var(--app-info-color) !important;
+  color: var(--app-light-text-color) !important;
+}
+.p-message.p-message-warn {
+  background: var(--app-warnning-color) !important;
+  border: solid var(--app-warnning-color) !important;
+  color: var(--app-dark-text-color) !important;
+}
+.p-message.p-message-error {
+  background: var(--app-danger-color) !important;
+  border: solid var(--app-danger-color) !important;
+  color: var(--app-light-text-color) !important;
+}
