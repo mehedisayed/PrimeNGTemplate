@@ -1,0 +1,7 @@
+.p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
+  background: var(--app-secondary-color);
+}
+.p-inputswitch.p-inputswitch-checked:not(.p-disabled):hover
+  .p-inputswitch-slider {
+  background: var(--app-secondary-color);
+}

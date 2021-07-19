@@ -152,6 +152,34 @@
         display="chip"
       ></p-multiSelect>
     </div>
+    <div class="p-col">
+      <span>Basic</span>
+      <p-inputMask
+        mask="99-999999"
+        [(ngModel)]="value"
+        placeholder="99-999999"
+      ></p-inputMask>
+    </div>
+    <div class="p-col">
+      <p-inputSwitch [(ngModel)]="checked"></p-inputSwitch>
+    </div>
+    <div class="p-col">
+      <h5>Basic: {{ val }}</h5>
+      <p-slider [(ngModel)]="val"></p-slider>
+
+      <h5>Input: {{ val }}</h5>
+      <input type="text" pInputText [(ngModel)]="val" readonly />
+      <p-slider [(ngModel)]="val"></p-slider>
+
+      <h5>Step: {{ val }}</h5>
+      <p-slider [(ngModel)]="val" [step]="20"></p-slider>
+
+      <h5>Range: {{ 20 + " - " + 60 }}</h5>
+      <p-slider [(ngModel)]="val" [range]="true"></p-slider>
+
+      <h5>Vertical: {{ val }}</h5>
+      <p-slider [(ngModel)]="val" orientation="vertical"></p-slider>
+    </div>
   </div>
   <div class="p-grid">
     <div class="p-col">

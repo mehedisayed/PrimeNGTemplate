@@ -11,7 +11,10 @@ import { Table } from 'primeng/table';
 export class MehediComponent implements OnInit {
   msgs: Message[];
   password: string;
+  checked: boolean = false;
+  value: string;
   ratingValue: number = 3;
+  val: number;
   products: any[];
   countries: any[];
   selectedCity: any;
