@@ -9,6 +9,7 @@ import { Table } from 'primeng/table';
   providers: [MessageService],
 })
 export class MehediComponent implements OnInit {
+  uploadedFiles: any[] = [];
   msgs: Message[];
   password: string;
   checked: boolean = false;
@@ -23,6 +24,11 @@ export class MehediComponent implements OnInit {
   selectedProduct: any;
   statuses: any[];
   cols: any[];
+  onUpload(event) {
+    for (let file of event.files) {
+      this.uploadedFiles.push(file);
+    }
+  }
   date: Date;
   selectedCountryAdvanced: any[];
   values: any[];

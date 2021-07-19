@@ -33,6 +33,9 @@ import { TabViewModule } from 'primeng/tabview';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { InputMaskModule } from 'primeng/inputmask';
 import { SliderModule } from 'primeng/slider';
+import { FileUploadModule } from 'primeng/fileupload';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [AppComponent, MehediComponent, RaihanComponent],
   imports: [
@@ -66,6 +69,8 @@ import { SliderModule } from 'primeng/slider';
     MultiSelectModule,
     InputMaskModule,
     SliderModule,
+    FileUploadModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
