@@ -15,12 +15,14 @@ export class MehediComponent implements OnInit {
   products: any[];
   countries: any[];
   selectedCity: any;
+  selectedCities: any[];
   filteredProdcut: any[];
   selectedProduct: any;
   statuses: any[];
   cols: any[];
   date: Date;
   selectedCountryAdvanced: any[];
+  values: any[];
   constructor(private messageService: MessageService) {}
 
   ngOnInit(): void {

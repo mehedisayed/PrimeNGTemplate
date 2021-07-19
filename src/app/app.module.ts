@@ -29,6 +29,8 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { MessagesModule } from 'primeng/messages';
 import { ToastModule } from 'primeng/toast';
+import { TabViewModule } from 'primeng/tabview';
+import { MultiSelectModule } from 'primeng/multiselect';
 
 @NgModule({
   declarations: [AppComponent, MehediComponent, RaihanComponent],
@@ -59,6 +61,8 @@ import { ToastModule } from 'primeng/toast';
     ProgressBarModule,
     MessagesModule,
     ToastModule,
+    TabViewModule,
+    MultiSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

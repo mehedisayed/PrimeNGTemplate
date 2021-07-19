@@ -109,6 +109,49 @@
         class="p-button-danger p-mb-2"
       ></button>
     </div>
+    <div class="p-col">
+      <h5>Basic</h5>
+      <p-chips [(ngModel)]="values"></p-chips>
+
+      <h5>Comma Separator</h5>
+      <p-chips [(ngModel)]="values" separator=","></p-chips>
+    </div>
+    <div class="p-col">
+      <p-tabView>
+        <p-tabPanel header="Header 1"> Content 1 </p-tabPanel>
+        <p-tabPanel header="Header 2"> Content 2 </p-tabPanel>
+        <p-tabPanel header="Header 3"> Content 3 </p-tabPanel>
+      </p-tabView>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col">
+      <h5>Template Mode</h5>
+      <p-multiSelect
+        [options]="countries"
+        [(ngModel)]="selectedCities"
+        defaultLabel="Select a City"
+        optionLabel="name"
+        selectedItemsLabel="{0} items selected"
+      ></p-multiSelect>
+
+      <h5>Elipsis Mode</h5>
+      <p-multiSelect
+        [options]="countries"
+        [(ngModel)]="selectedCities"
+        defaultLabel="Select a City"
+        optionLabel="name"
+      ></p-multiSelect>
+
+      <h5>Chips</h5>
+      <p-multiSelect
+        [options]="countries"
+        [(ngModel)]="selectedCities"
+        defaultLabel="Select a City"
+        optionLabel="name"
+        display="chip"
+      ></p-multiSelect>
+    </div>
   </div>
   <div class="p-grid">
     <div class="p-col">
