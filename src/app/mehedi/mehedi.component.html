@@ -360,7 +360,8 @@
       <p-listbox
         [options]="products"
         [(ngModel)]="selectedCity"
-        [metaKeySelection]="true"
+        [metaKeySelection]="false"
+        [multiple]="false"
         [filter]="true"
         optionLabel="name"
         [style]="{ width: '100%' }"
