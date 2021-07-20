@@ -356,5 +356,35 @@
         </ng-template>
       </p-fileUpload>
     </div>
+    <div class="p-col">
+      <p-listbox
+        [options]="products"
+        [(ngModel)]="selectedCity"
+        [metaKeySelection]="true"
+        [filter]="true"
+        optionLabel="name"
+        [style]="{ width: '100%' }"
+      >
+        <ng-template let-product pTemplate="item">
+          <div class="product-item">
+            <div class="product-list-detail">
+              <h4 class="p-mb-2">{{ product.name }}</h4>
+              <i class="pi pi-tag product-category-icon"></i>
+              <span class="product-category">{{ product.category }}</span>
+            </div>
+            <div class="product-list-action">
+              <h6 class="p-mb-2">${{ product.price }}</h6>
+              <span
+                [class]="
+                  'product-badge status-' +
+                  product.inventoryStatus.toLowerCase()
+                "
+                >{{ product.inventoryStatus }}</span
+              >
+            </div>
+          </div>
+        </ng-template></p-listbox
+      >
+    </div>
   </div>
 </div>

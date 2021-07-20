@@ -1,0 +1,15 @@
+.p-listbox .p-listbox-list {
+  padding: 0rem 0rem;
+}
+.p-listbox .p-listbox-list .p-listbox-item.p-highlight {
+  color: var(--app-light-text-color);
+  background: var(--app-secondary-color);
+}
+.p-listbox .p-listbox-list .p-listbox-item {
+  border: 1px solid var(--app-border-color) !important;
+}
+.p-listbox .p-listbox-header {
+  padding: 0.5rem 1.5rem;
+  border-bottom: 1px solid var(--app-border-color);
+  background: var(--app-secondary-background-color);
+}

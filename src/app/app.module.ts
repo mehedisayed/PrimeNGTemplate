@@ -35,6 +35,7 @@ import { InputMaskModule } from 'primeng/inputmask';
 import { SliderModule } from 'primeng/slider';
 import { FileUploadModule } from 'primeng/fileupload';
 import { HttpClientModule } from '@angular/common/http';
+import { ListboxModule } from 'primeng/listbox';
 
 @NgModule({
   declarations: [AppComponent, MehediComponent, RaihanComponent],
@@ -71,6 +72,7 @@ import { HttpClientModule } from '@angular/common/http';
     SliderModule,
     FileUploadModule,
     HttpClientModule,
+    ListboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
